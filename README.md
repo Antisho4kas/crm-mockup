@@ -90,7 +90,7 @@ crm-mockup/
 
 ## Design System
 
-The project uses custom Taiga-inspired CSS classes:
+The design system is inspired by [Taiga](https://taiga.io/), an open-source project management platform. Custom CSS classes follow Taiga's clean, professional aesthetic:
 - `.taiga-card` — content cards
 - `.taiga-btn` — buttons
 - `.taiga-alert` — alert banners
