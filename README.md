@@ -97,11 +97,6 @@ The project uses custom Taiga-inspired CSS classes:
 - `.taiga-badge` — status badges
 - `.taiga-progress` — progress bars
 
-## Responsive Design
-
-- **Desktop** — fixed left sidebar
-- **Mobile** — slide-out hamburger menu
-
 ## License
 
 MIT
