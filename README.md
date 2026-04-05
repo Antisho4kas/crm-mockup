@@ -1,124 +1,107 @@
 # Advanced CRM System
 
-Интеллектуальная CRM-система с системой обнаружения KPI-парадоксов для консалтинговых компаний.
+An intelligent CRM system with KPI paradox detection for consulting companies.
 
-## 🚀 Демо
+## Live Demo
 
-[Live Demo](https://your-username.github.io/crm-mockup/)
+[Live Demo on GitHub Pages](https://antisho4kas.github.io/crm-mockup/)
 
-##  Технологический стек
+## Tech Stack
 
 - **React 18** + **TypeScript**
-- **Tailwind CSS** — стилизация с Taiga-inspired дизайн-системой
-- **React Router 6** — маршрутизация
-- **i18next** — мультиязычность (DE/EN)
-- **Lucide React** — иконки
-- **Chart.js** — графики (готовы для интеграции)
+- **Tailwind CSS** — Taiga-inspired design system
+- **React Router 6** — client-side routing
+- **i18next** — internationalization (DE/EN)
+- **Lucide React** — icon library
+- **Chart.js** — charting support (ready for integration)
 
-## ✨ Ключевые особенности
+## Features
 
-### 📊 Intelligent Dashboard
-- KPI-метрики с трендами
-- Система обнаружения KPI-парадоксов (gaming, неэффективность)
-- Отслеживание активности и производительности команды
-- Анализ проектов с бюджетом и прогрессом
+### Intelligent Dashboard
+- KPI metrics with trend indicators
+- KPI paradox detection system (gaming, ineffective metrics)
+- Activity feed and team performance tracking
+- Project overview with budget and progress
 
-### 🎯 Dual Performance System
-- **Количественные метрики** — объём работы, скорость выполнения
-- **Качественные метрики** — оценка качества, удовлетворённость клиентов
-- **Ролевые метрики** — специфичные для консультантов, разработчиков, менеджеров
+### Dual Performance System
+- **Quantitative metrics** — workload volume, completion speed
+- **Qualitative metrics** — quality scores, client satisfaction
+- **Role-specific metrics** — tailored for consultants, developers, and managers
 
-### 🌐 Мультиязычность
-- Немецкий и английский языки
-- Автоматическое определение языка браузера
-- Переключение в реальном времени
+### Internationalization
+- German and English languages
+- Automatic browser language detection
+- Real-time language switching
 
-## 📦 Установка
+## Installation
 
 ```bash
-# Клонировать репозиторий
-git clone https://github.com/your-username/crm-mockup.git
+# Clone the repository
+git clone https://github.com/Antisho4kas/crm-mockup.git
 
-# Перейти в директорию
+# Navigate to project directory
 cd crm-mockup
 
-# Установить зависимости
+# Install dependencies
 npm install
 
-# Запустить dev-сервер
+# Start dev server
 npm start
 ```
 
-Приложение откроется на **http://localhost:3000**
+The app opens at **http://localhost:3000**
 
-## 🏗 Структура проекта
+## Project Structure
 
 ```
 crm-mockup/
 ├── src/
-│   ├── components/       # Переиспользуемые компоненты
-│   │   ├── Layout.tsx      # Оболочка: сайдбар, навигация, хедер
-│   │   ├── KPICard.tsx     # Карточки метрик
-│   │   ├── ParadoxAlert.tsx # Алерты KPI-парадоксов
+│   ├── components/       # Reusable components
+│   │   ├── Layout.tsx      # App shell: sidebar, navigation, header
+│   │   ├── KPICard.tsx     # KPI metric cards
+│   │   ├── ParadoxAlert.tsx # KPI paradox alerts
 │   │   └── PerformanceChart.tsx
-│   ├── pages/            # Страницы
-│   │   ├── Dashboard.tsx   # Главная панель (полностью реализована)
-│   │   ├── Customers.tsx   # Управление клиентами
-│   │   ├── Projects.tsx    # Управление проектами
-│   │   ├── TimeTracking.tsx # Учёт времени
-│   │   └── Analytics.tsx   # Аналитика
+│   ├── pages/            # Page components
+│   │   ├── Dashboard.tsx   # Main dashboard (fully implemented)
+│   │   ├── Customers.tsx   # Customer management
+│   │   ├── Projects.tsx    # Project management
+│   │   ├── TimeTracking.tsx # Time tracking
+│   │   └── Analytics.tsx   # Analytics & reports
 │   ├── data/
-│   │   └── mockData.ts     # Mock-данные
+│   │   └── mockData.ts     # Mock data
 │   ├── types/
-│   │   └── index.ts        # TypeScript интерфейсы
+│   │   └── index.ts        # TypeScript interfaces
 │   ├── i18n/
-│   │   └── index.ts        # Конфигурация локализации
+│   │   └── index.ts        # i18n configuration
 │   ├── locales/
-│   │   ├── de.json         # Немецкий
-│   │   └── en.json         # Английский
-│   └── App.tsx             # Главный компонент
+│   │   ├── de.json         # German translations
+│   │   └── en.json         # English translations
+│   └── App.tsx             # Root component
 └── public/
 ```
 
-##  Скрипты
+## Scripts
 
-| Команда | Описание |
-|---------|----------|
-| `npm start` | Запуск dev-сервера |
-| `npm run build` | Production сборка |
-| `npm test` | Запуск тестов |
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start dev server |
+| `npm run build` | Production build |
+| `npm test` | Run tests |
 
-## 🎨 Дизайн-система
+## Design System
 
-Проект использует кастомные Taiga-inspired CSS классы:
-- `.taiga-card` — карточки
-- `.taiga-btn` — кнопки
-- `.taiga-alert` — алерты
-- `.taiga-badge` — бейджи статусов
-- `.taiga-progress` — прогресс-бары
+The project uses custom Taiga-inspired CSS classes:
+- `.taiga-card` — content cards
+- `.taiga-btn` — buttons
+- `.taiga-alert` — alert banners
+- `.taiga-badge` — status badges
+- `.taiga-progress` — progress bars
 
-## 📱 Адаптивный дизайн
+## Responsive Design
 
-- **Desktop** — фиксированный сайдбар слева
-- **Mobile** — выдвижное меню с бургером
+- **Desktop** — fixed left sidebar
+- **Mobile** — slide-out hamburger menu
 
-## 🔧 Как развернуть на GitHub Pages
-
-```bash
-# Установить gh-pages
-npm install --save-dev gh-pages
-
-# Добавить в package.json:
-"homepage": "https://your-username.github.io/crm-mockup"
-
-# В scripts добавить:
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build"
-
-# Развернуть
-npm run deploy
-```
-
-## 📄 Лицензия
+## License
 
 MIT
