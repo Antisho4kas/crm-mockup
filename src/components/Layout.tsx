@@ -13,7 +13,6 @@ import {
   Plus,
   Search,
   Bell,
-  Settings,
   ChevronDown,
   Filter,
   Download
