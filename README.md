@@ -1,6 +1,13 @@
-# Advanced CRM System
+# Smart Workforce CRM with Effort Analytics
 
-An intelligent CRM system with KPI paradox detection for consulting companies.
+## Overview
+
+Smart Workforce CRM is a lightweight customer relationship and workforce analytics system designed to improve project transparency, employee performance tracking, and effort estimation.
+
+The system focuses on solving a common problem in consulting and enterprise environments:
+tracking real work effort (person-hours) and transforming it into actionable performance insights.
+
+This project simulates integration with enterprise systems (e.g. SAP or internal time-tracking tools) and provides a clean, user-friendly interface for managing projects, employees, and workload efficiency.
 
 ## Live Demo
 
