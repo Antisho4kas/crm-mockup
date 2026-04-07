@@ -106,12 +106,12 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           {/* Quick Actions */}
           <div className="p-4 border-b border-gray-200">
-            <button 
+            <button
               onClick={() => alert('New Project functionality coming soon!')}
               className="w-full taiga-btn taiga-btn-primary flex items-center justify-center space-x-2"
             >
               <Plus className="h-4 w-4" />
-              <span>New Project</span>
+              <span>{t('dashboard.newProject')}</span>
             </button>
           </div>
 
@@ -162,7 +162,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Search className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />
                 <input
                   type="text"
-                  placeholder="Search projects, customers, tasks..."
+                  placeholder={t('dashboard.searchPlaceholder') || 'Search...'}
                   className="taiga-input pl-10 w-64"
                 />
               </div>
