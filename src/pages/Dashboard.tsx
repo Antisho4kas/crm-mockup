@@ -203,18 +203,18 @@ export const Dashboard: React.FC = () => {
         <div className="flex items-center space-x-3">
           <button className="taiga-btn taiga-btn-secondary flex items-center space-x-2">
             <Filter className="h-4 w-4" />
-            <span>Filter</span>
+            <span>{t('dashboard.filter')}</span>
           </button>
           <button className="taiga-btn taiga-btn-secondary flex items-center space-x-2">
             <Download className="h-4 w-4" />
-            <span>Export</span>
+            <span>{t('dashboard.export')}</span>
           </button>
-          <button 
+          <button
             onClick={() => alert('New Dashboard functionality coming soon!')}
             className="taiga-btn taiga-btn-primary flex items-center space-x-2"
           >
             <Plus className="h-4 w-4" />
-            <span>New Dashboard</span>
+            <span>{t('dashboard.newDashboard')}</span>
           </button>
         </div>
       </div>
@@ -258,10 +258,10 @@ export const Dashboard: React.FC = () => {
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center">
                 <Clock className="mr-2 h-5 w-5 text-gray-500" />
-                Recent Activities
+                {t('dashboard.recentActivities')}
               </h3>
               <button className="text-sm text-blue-600 hover:text-blue-800">
-                View All
+                {t('dashboard.viewAll')}
               </button>
             </div>
             
@@ -299,10 +299,10 @@ export const Dashboard: React.FC = () => {
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center">
                 <FolderOpen className="mr-2 h-5 w-5 text-gray-500" />
-                Top Projects
+                {t('dashboard.topProjects')}
               </h3>
               <button className="text-sm text-blue-600 hover:text-blue-800">
-                View All
+                {t('dashboard.viewAll')}
               </button>
             </div>
             
@@ -324,7 +324,7 @@ export const Dashboard: React.FC = () => {
                         <div>
                           <p className="font-medium text-gray-900">{project.name}</p>
                           <p className="text-xs text-gray-500">
-                            {project.priority === 'high' ? 'High Priority' : 'Medium Priority'}
+                            {project.priority === 'high' ? t('dashboard.highPriority') : t('dashboard.mediumPriority')}
                           </p>
                         </div>
                       </td>
@@ -355,7 +355,7 @@ export const Dashboard: React.FC = () => {
                             €{project.budget.toLocaleString()}
                           </p>
                           <p className="text-xs text-gray-500">
-                            €{project.actualCost.toLocaleString()} spent
+                            €{project.actualCost.toLocaleString()} {t('dashboard.spent')}
                           </p>
                         </div>
                       </td>
@@ -374,10 +374,10 @@ export const Dashboard: React.FC = () => {
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 flex items-center">
                 <BarChart3 className="mr-2 h-5 w-5 text-gray-500" />
-                Team Performance
+                {t('dashboard.teamPerformance')}
               </h3>
               <button className="text-sm text-blue-600 hover:text-blue-800">
-                View All
+                {t('dashboard.viewAll')}
               </button>
             </div>
             
@@ -424,27 +424,27 @@ export const Dashboard: React.FC = () => {
           <div className="taiga-card">
             <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
               <PieChart className="mr-2 h-5 w-5 text-gray-500" />
-              Quick Stats
+              {t('dashboard.quickStats')}
             </h3>
-            
+
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Monthly Growth</span>
+                <span className="text-sm text-gray-600">{t('dashboard.monthlyGrowthValue')}</span>
                 <span className="text-sm font-medium text-green-600">+12.5%</span>
               </div>
-              
+
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Risk Projects</span>
+                <span className="text-sm text-gray-600">{t('dashboard.riskProjectsCount')}</span>
                 <span className="text-sm font-medium text-red-600">1</span>
               </div>
-              
+
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Avg. Project Duration</span>
+                <span className="text-sm text-gray-600">{t('dashboard.avgProjectDuration')}</span>
                 <span className="text-sm font-medium text-gray-900">4.2 months</span>
               </div>
-              
+
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Client Satisfaction</span>
+                <span className="text-sm text-gray-600">{t('dashboard.clientSatisfaction')}</span>
                 <span className="text-sm font-medium text-blue-600">4.2/5.0</span>
               </div>
             </div>
@@ -483,38 +483,38 @@ export const Dashboard: React.FC = () => {
           <div className="space-y-4">
             <div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-600">Task Completion Rate</span>
+                <span className="text-sm text-gray-600">{t('dashboard.taskCompletionRate')}</span>
                 <span className="text-sm font-medium text-gray-900">87%</span>
               </div>
               <div className="taiga-progress">
                 <div className="taiga-progress-bar" style={{ width: '87%' }}></div>
               </div>
             </div>
-            
+
             <div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-600">Quality Score</span>
+                <span className="text-sm text-gray-600">{t('dashboard.qualityScore')}</span>
                 <span className="text-sm font-medium text-gray-900">4.3/5.0</span>
               </div>
               <div className="taiga-progress">
                 <div className="taiga-progress-bar bg-green-500" style={{ width: '86%' }}></div>
               </div>
             </div>
-            
+
             <div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-600">Client Satisfaction</span>
+                <span className="text-sm text-gray-600">{t('dashboard.clientSatisfaction')}</span>
                 <span className="text-sm font-medium text-gray-900">4.1/5.0</span>
               </div>
               <div className="taiga-progress">
                 <div className="taiga-progress-bar bg-blue-500" style={{ width: '82%' }}></div>
               </div>
             </div>
-            
+
             <div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-600">KPI Paradox Detection</span>
-                <span className="text-sm font-medium text-red-600">2 alerts</span>
+                <span className="text-sm text-gray-600">{t('dashboard.kpiParadoxDetection')}</span>
+                <span className="text-sm font-medium text-red-600">2 {t('dashboard.alerts')}</span>
               </div>
               <div className="taiga-progress">
                 <div className="taiga-progress-bar bg-red-500" style={{ width: '15%' }}></div>

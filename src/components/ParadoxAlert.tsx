@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ParadoxAlert as ParadoxAlertType } from '../types';
 import { AlertTriangle, AlertCircle, Info, X, ExternalLink } from 'lucide-react';
 
@@ -8,6 +9,8 @@ interface ParadoxAlertProps {
 }
 
 export const ParadoxAlert: React.FC<ParadoxAlertProps> = ({ alert, onDismiss }) => {
+  const { t } = useTranslation();
+
   const getAlertIcon = () => {
     switch (alert.type) {
       case 'gaming':
@@ -47,20 +50,20 @@ export const ParadoxAlert: React.FC<ParadoxAlertProps> = ({ alert, onDismiss }) 
         <div className="flex-shrink-0 mr-3">
           {getAlertIcon()}
         </div>
-        
+
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center space-x-2">
               <h4 className="text-sm font-semibold text-gray-900">
-                {alert.type === 'gaming' && 'Gaming Detected'}
-                {alert.type === 'ineffective' && 'Ineffective KPI'}
+                {alert.type === 'gaming' && t('kpi.gamingWarning')}
+                {alert.type === 'ineffective' && t('kpi.ineffectiveMetrics')}
                 {alert.type === 'misaligned' && 'Misaligned Metrics'}
               </h4>
               <span className={getSeverityBadge()}>
                 {alert.severity.toUpperCase()}
               </span>
             </div>
-            
+
             {onDismiss && (
               <button
                 onClick={onDismiss}
@@ -70,21 +73,21 @@ export const ParadoxAlert: React.FC<ParadoxAlertProps> = ({ alert, onDismiss }) 
               </button>
             )}
           </div>
-          
+
           <p className="text-sm text-gray-700 mb-3">
             {alert.description}
           </p>
-          
+
           <div className="bg-gray-50 rounded-lg p-3 mb-3">
             <div className="flex items-center space-x-2 mb-1">
               <ExternalLink className="h-4 w-4 text-gray-500" />
-              <span className="text-xs font-medium text-gray-700">RECOMMENDATION</span>
+              <span className="text-xs font-medium text-gray-700">{t('kpi.recommendations')}</span>
             </div>
             <p className="text-sm text-gray-800 font-medium">
               {alert.recommendation}
             </p>
           </div>
-          
+
           <div className="flex items-center justify-between text-xs text-gray-500">
             <span>Detected: {alert.detectedAt.toLocaleDateString()}</span>
             <span>Employee ID: {alert.employeeId}</span>
