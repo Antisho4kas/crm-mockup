@@ -10,9 +10,11 @@ import {
   Title,
   Tooltip,
   Legend,
-  Filler
+  Filler,
+  ChartData,
+  ChartOptions
 } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+import { Chart } from 'react-chartjs-2';
 import { mockEmployees } from '../data/mockData';
 
 ChartJS.register(
@@ -36,7 +38,7 @@ export const PerformanceChart: React.FC = () => {
   const qualitativeScores = mockEmployees.map(e => e.performanceMetrics.qualitativeScore);
   const overallRatings = mockEmployees.map(e => e.performanceMetrics.overallRating);
 
-  const data = {
+  const data: ChartData<'bar'> = {
     labels,
     datasets: [
       {
@@ -60,7 +62,7 @@ export const PerformanceChart: React.FC = () => {
       {
         label: i18n.language === 'de' ? 'Gesamtbewertung' : 'Overall Rating',
         data: overallRatings,
-        type: 'line' as const,
+        type: 'line',
         borderColor: 'rgb(168, 85, 247)',
         backgroundColor: 'rgba(168, 85, 247, 0.1)',
         borderWidth: 3,
@@ -76,22 +78,22 @@ export const PerformanceChart: React.FC = () => {
     ]
   };
 
-  const options = {
+  const options: ChartOptions<'bar'> = {
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
-      mode: 'index' as const,
+      mode: 'index',
       intersect: false
     },
     plugins: {
       legend: {
-        position: 'top' as const,
+        position: 'top',
         labels: {
           usePointStyle: true,
           padding: 20,
           font: {
             size: 12,
-            weight: 500
+            weight: 500 as const
           }
         }
       },
@@ -120,7 +122,7 @@ export const PerformanceChart: React.FC = () => {
         },
         ticks: {
           font: { size: 11 },
-          callback: (value: number) => `${value}%`
+          callback: (value: string | number) => `${value}%`
         }
       },
       x: {
@@ -129,7 +131,7 @@ export const PerformanceChart: React.FC = () => {
           drawBorder: false
         },
         ticks: {
-          font: { size: 11, weight: 500 }
+          font: { size: 11, weight: 500 as const }
         }
       }
     }
@@ -137,7 +139,7 @@ export const PerformanceChart: React.FC = () => {
 
   return (
     <div className="h-72">
-      <Bar data={data} options={options} />
+      <Chart type="bar" data={data} options={options} />
     </div>
   );
 };
