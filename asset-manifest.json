@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crm-mockup/static/css/main.b913b854.css",
+    "main.js": "/crm-mockup/static/js/main.6f1db869.js",
+    "index.html": "/crm-mockup/index.html",
+    "main.b913b854.css.map": "/crm-mockup/static/css/main.b913b854.css.map",
+    "main.6f1db869.js.map": "/crm-mockup/static/js/main.6f1db869.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b913b854.css",
+    "static/js/main.6f1db869.js"
+  ]
+}
