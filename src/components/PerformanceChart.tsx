@@ -30,7 +30,7 @@ ChartJS.register(
 );
 
 export const PerformanceChart: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const labels = mockEmployees.map(e => e.name.split(' ').slice(1).join(' '));
 
@@ -38,7 +38,7 @@ export const PerformanceChart: React.FC = () => {
   const qualitativeScores = mockEmployees.map(e => e.performanceMetrics.qualitativeScore);
   const overallRatings = mockEmployees.map(e => e.performanceMetrics.overallRating);
 
-  const data: ChartData<'bar'> = {
+  const data: ChartData<'bar' | 'line'> = {
     labels,
     datasets: [
       {
@@ -78,7 +78,7 @@ export const PerformanceChart: React.FC = () => {
     ]
   };
 
-  const options: ChartOptions<'bar'> = {
+  const options: ChartOptions<'bar' | 'line'> = {
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
@@ -117,8 +117,7 @@ export const PerformanceChart: React.FC = () => {
         min: 70,
         max: 100,
         grid: {
-          color: 'rgba(0, 0, 0, 0.05)',
-          drawBorder: false
+          color: 'rgba(0, 0, 0, 0.05)'
         },
         ticks: {
           font: { size: 11 },
@@ -127,8 +126,7 @@ export const PerformanceChart: React.FC = () => {
       },
       x: {
         grid: {
-          display: false,
-          drawBorder: false
+          display: false
         },
         ticks: {
           font: { size: 11, weight: 500 as const }

@@ -8,9 +8,7 @@ import {
   TrendingUp,
   DollarSign,
   Activity,
-  AlertTriangle,
   Users,
-  Calendar,
   Target
 } from 'lucide-react';
 import { mockProjects, mockCustomers, mockEmployees } from '../data/mockData';

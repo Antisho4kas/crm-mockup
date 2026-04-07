@@ -5,11 +5,9 @@ import {
   Plus,
   Filter,
   Search,
-  Users,
   DollarSign,
   TrendingUp,
   CheckCircle,
-  AlertCircle,
   Calendar,
   Star,
   Target
